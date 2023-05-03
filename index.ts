@@ -29,3 +29,9 @@ let project: {
   days: 30,
   started: true,
 };
+
+let projectss {
+  member: string[],
+  days: number,
+  started: boolean
+} = { member: ["kim", "park"], days: 30, started: false };
