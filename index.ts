@@ -159,3 +159,33 @@ function 함수임다(x: Car | Bike) {
     console.log("x는 Car타입이에요.");
   }
 }
+
+function 밤수(parameter: string) {
+  if (typeof parameter == "string") {
+    console.log(parameter);
+  } else {
+    console.log(parameter); // 이런경우 Never
+  }
+}
+
+class Users {
+  private name = "kim";
+  constructor(a) {
+    this.name = a;
+  }
+}
+
+class Person2 {
+  constructor(public name) {}
+}
+let 자식 = new Person("kim");
+
+class Usss {
+  public x = 10;
+}
+
+function 함부<Type>(x: unknown[]) {
+  return x[0];
+}
+
+let a = 함부<number>([4, 2]);
