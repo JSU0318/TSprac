@@ -112,3 +112,50 @@ let 제목 = document.querySelector("#title");
 if (제목?.innerHTML != undefined) {
   제목.innerHTML = "반가워요";
 }
+
+class Person {
+  name: string;
+  constructor(a: string) {
+    this.name = a;
+  }
+  함수(a: string) {
+    console.log("안녕" + a);
+  }
+}
+
+let human1 = new Person("jung");
+let human2 = new Person("sang");
+human1.함수("안녕");
+
+interface Squares {
+  color: string;
+  width: number;
+}
+let 네모: Square = { color: "red", width: 100 };
+
+type Fish = { swif: string };
+type Bird = { fly: string };
+
+function 함수수(animal: Fish | Bird) {
+  if ("swim" in animal) {
+    animal.swim;
+  }
+}
+
+let 날짜 = new Date();
+if (날짜 instanceof Date) {
+}
+type Car = {
+  wheel: "4개";
+  color: string;
+};
+type Bike = {
+  wheel: "2개";
+  color: string;
+};
+
+function 함수임다(x: Car | Bike) {
+  if (x.wheel === "4개") {
+    console.log("x는 Car타입이에요.");
+  }
+}
