@@ -189,3 +189,5 @@ function 함부<Type>(x: unknown[]) {
 }
 
 let a = 함부<number>([4, 2]);
+
+declare let b: number;
