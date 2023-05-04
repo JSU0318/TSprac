@@ -105,3 +105,10 @@ function removeDash(x: string): number {
   let result = x.replace(/=/g, "");
   return parseFloat(result);
 }
+
+type 함수타입1 = (a: string) => string;
+
+let 제목 = document.querySelector("#title");
+if (제목?.innerHTML != undefined) {
+  제목.innerHTML = "반가워요";
+}
