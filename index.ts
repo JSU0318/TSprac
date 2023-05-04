@@ -72,3 +72,36 @@ function 함수(a: "가위" | "바위" | "보"): ("가위" | "바위" | "보")[]
 }
 
 함수("가위");
+
+var 자료 = {
+  name: "kim",
+} as const;
+function 내함수(a: "kim") {}
+
+내함수(자료.name);
+
+type 함수타입 = (a: string) => number;
+
+() => {
+  return 10;
+};
+function hamsui() {}
+
+let 회원정보 = {
+  name: "kim",
+  plusOne(a) {
+    return a + 1;
+  },
+  changeName: () => {},
+};
+
+type CutType = (x: string) => string;
+
+let cutZero: CutType = function (x) {
+  let result = x.replace(/^0+/, "");
+  return result;
+};
+function removeDash(x: string): number {
+  let result = x.replace(/=/g, "");
+  return parseFloat(result);
+}
