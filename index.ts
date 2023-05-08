@@ -191,3 +191,10 @@ function 함부<Type>(x: unknown[]) {
 let a = 함부<number>([4, 2]);
 
 declare let b: number;
+
+let 멍멍: [string, boolean?, number?] = ["dog", true];
+
+function 함주(...x: [number, string]) {
+  console.log(x);
+}
+함주(1, "222");
