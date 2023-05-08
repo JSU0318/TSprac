@@ -1,5 +1,6 @@
 // type Name = string | number;
 // let names: Name = 123;
+export {};
 
 function Ham(x: number): number {
   return x * 2;
@@ -198,3 +199,50 @@ function 함주(...x: [number, string]) {
   console.log(x);
 }
 함주(1, "222");
+
+let arr = [1, 2];
+let arr2: [number, number, ...number[]] = [4, 5, ...arr];
+
+declare global {
+  type Dog = string;
+}
+
+let 나이s: Age = 30;
+$().append();
+
+/////////////////////////
+
+interface CarType {
+  model: string;
+  tax: (price: number) => number;
+}
+
+class Cars implements CarType {
+  model; ///any 타입됨
+  tax(ab) {
+    ///a 파라미터는 any 타입됨
+    return ab * 0.1;
+  }
+}
+
+let obj = { name: "kim", age: 20 };
+Object.keys(obj);
+
+interface Person {
+  age: number;
+  name: string;
+}
+type PersonKeys = keyof Person;
+let d: PersonKeys = "name";
+
+type Carss = {
+  color: boolean;
+  model: boolean;
+  price: boolean | number;
+};
+
+type TypeChanger<MyType> = {
+  [key in keyof MyType]: string;
+};
+
+type 새로운타입 = TypeChanger<Car>;

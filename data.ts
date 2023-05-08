@@ -1,1 +1,2 @@
-export var b = 10;
+let b: Dog = "kim";
+console.log(b + 1);
