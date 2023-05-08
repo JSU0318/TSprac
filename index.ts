@@ -246,3 +246,10 @@ type TypeChanger<MyType> = {
 };
 
 type 새로운타입 = TypeChanger<Car>;
+
+type Ages<T> = T extends string ? string : unknown;
+
+let b2: Ages<string>;
+let a2: Ages<number>;
+
+type FirstItem<T> = T extends infer R ? string : unknown;
